@@ -5,9 +5,6 @@
 #include <vector>
 #include <iomanip>
 
-#include <tbb/tbb.h>
-#include <tbb/parallel_for.h>
-
 #include <embree3/rtcore.h>
 #include <embree3/rtcore_ray.h>
 
