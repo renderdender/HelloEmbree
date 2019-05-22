@@ -1,5 +1,11 @@
 # HelloEmbree
-This is a template used for our Advanced Computer Graphics course at [MSU Graphics Lab](http://graphics.cs.msu.ru/en).
+
+<p align="center">
+  <img width="600" height="600" src="https://github.com/pavlovdenis/HelloEmbree/blob/master/pics/pt.png">
+</p>
+
+This project is a template used for our Advanced Computer Graphics course at [MSU Graphics Lab](http://graphics.cs.msu.ru/en), focused on path tracing and more advanced global illumination algorithms.
+
 
 Basically, it's a very simple ray-tracer that writes the color of the first hit to the image and provides some useful utilities like image i/o, .obj model parser, e.t.c.
 ## Installing Dependencies - Intel Embree
