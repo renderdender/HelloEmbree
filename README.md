@@ -27,4 +27,6 @@ Or you could just open the project with CLion.
 
 If everything's done correctly, the program should output something like this:
 
-![Template Image](https://github.com/pavlovdenis/HelloEmbree/pics/template.png)
+<p align="center">
+  <img width="600" height="600" src="hhttps://github.com/pavlovdenis/HelloEmbree/pics/template.png">
+</p>
