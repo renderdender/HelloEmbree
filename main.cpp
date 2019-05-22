@@ -33,6 +33,7 @@ struct Camera{
 };
 
 // TODO(?): Implement at least stochastic sampling or stratified sampling (maybe something more complex? filtering? quasi-mc?)
+// TODO(?): You may also want to implement a proper camera class.
 // Generation of the initial sample
 inline Vec3 generate_sample(int pixel_x, int pixel_y, int filter_dx, int filter_dy, Camera camera){
     Vec3 d = camera.x_axis * ((float)pixel_x / camera.width - 0.5) +
@@ -151,7 +152,7 @@ void render(const RTCScene& embree_scene, const Camera& camera, const int spp, c
     // Iterate over all the pixels, first height, then width
     for (int y = 0; y < camera.height; y++){
 
-        fprintf(stderr,"\rRendering (%d spp) %5.2f%%",spp*4,100.0*y/(camera.height-1));
+        fprintf(stderr,"\rRendering (%d spp) %5.2f%%",spp,100.0*y/(camera.height-1));
 
         // TODO: You have to parallelize your renderer
         // Easy option: just use OpenMP / Intel TBB to run the for loop in parallel (don't forget to avoid writing to the same pixel at the same time by different processes)
@@ -187,7 +188,7 @@ int main(int argc, char *argv[]){
     // Image resolution, SPP
     int film_width        = 800;
     int film_height       = 800;
-    int samples_per_pixel = 100;
+    int samples_per_pixel = 1;
 
     // Setting the camera
     Camera camera_desc;
