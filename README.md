@@ -28,5 +28,5 @@ Or you could just open the project with CLion.
 If everything's done correctly, the program should output something like this:
 
 <p align="center">
-  <img width="400" height="400" src="hhttps://github.com/pavlovdenis/HelloEmbree/pics/template.png">
+  <img width="600" height="600" src="https://github.com/pavlovdenis/HelloEmbree/pics/template.png">
 </p>
