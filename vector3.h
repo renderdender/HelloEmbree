@@ -4,6 +4,7 @@
 #include <cstddef>
 #include <cmath>
 #include <cassert>
+#include <limits>
 
 
 /*************************************************    Declaration    **************************************************/
@@ -302,4 +303,3 @@ inline Vector3T<T> normalize(Vector3T<T> lhs){
 
     return lhs;
 }
-

@@ -16,8 +16,8 @@ include_directories(${TBB_INCLUDE} ${EMBREE_INCLUDE})
 link_directories(${TBB_LIBRARY_RELEASE} ${EMBREE_LIBRARY})
 
 
-set(CMAKE_CXX_STANDARD 11)
-set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11")
+set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++17")
 
 #set(CORE_SOURCE )
 
