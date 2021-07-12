@@ -27,7 +27,7 @@ inline Vec3 specular_reflection(const Vec3 &wi, const Vec3 &n){
 inline Vec3 uniform_sphere(const double rnd1, const double rnd2){
     const double cos_theta = 1.0 - 2.0 * rnd1;
     const double sin_theta = std::sqrt(std::max(0.0, 1.0 - cos_theta * cos_theta));
-    const double phi = 2.0 * M_PI * rnd2;
+    const double phi = 2.0 * D_PI * rnd2;
     Vec3 res_vec = Vec3(cos(phi) * sin_theta, sin(phi) * sin_theta, cos_theta);
 
     return res_vec;
@@ -40,7 +40,7 @@ inline double uniform_sphere_pdf() {
 // Uniform sample on the hemisphere and it's PDF
 inline Vec3 uniform_hemisphere(const double rnd1, const double rnd2){
     const double sin_theta = std::sqrt(std::max(0.0, 1.0 - rnd1 * rnd1));
-    const double phi = 2.0 * M_PI * rnd2;
+    const double phi = 2.0 * D_PI * rnd2;
     Vec3 res_vec = Vec3(cos(phi) * sin_theta, sin(phi) * sin_theta, rnd2);
 
     return res_vec;
@@ -54,7 +54,7 @@ inline double uniform_hemisphere_pdf() {
 inline Vec3 cosine_weighted_hemisphere(const double rnd1, const double rnd2){
     const double cos_theta = std::sqrt(1.0 - rnd1);
     const double sin_theta = std::sqrt(rnd1);
-    const double phi = 2.0 * M_PI * rnd2;
+    const double phi = 2.0 * D_PI * rnd2;
     return Vec3(cos(phi) * sin_theta, sin(phi) * sin_theta, cos_theta);
 }
 
